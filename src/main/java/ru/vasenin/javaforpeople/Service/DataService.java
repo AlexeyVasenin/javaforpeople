@@ -10,8 +10,13 @@ import java.util.List;
 @Service
 public class DataService {
 
-    @Autowired
+    final
     List<StringModifer> stringModifers;
+
+    @Autowired
+    public DataService(List<StringModifer> stringModifers) {
+        this.stringModifers = stringModifers;
+    }
 
     public String getLine(String source) {
 
