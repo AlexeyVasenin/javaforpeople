@@ -1,6 +1,5 @@
 package ru.vasenin.javaforpeople.Components;
 
-import javafx.util.Pair;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import ru.vasenin.javaforpeople.Interface.StringModifer;
@@ -10,7 +9,7 @@ import java.util.Map;
 
 @Component
 @Order(4)
-public class FourClass implements StringModifer {
+public class StepFourDecClass implements StringModifer {
 
     public Map<String, String> alphabet() {
         Map<String, String> result = new HashMap<>();
@@ -29,8 +28,8 @@ public class FourClass implements StringModifer {
     @Override
     public String modify(String source) {
         Map<String, String> alphaClone = alphabet();
-        for (String oneChar : alphaClone.keySet()){
-           source = source.replace(oneChar,alphaClone.get(oneChar));
+        for (String oneChar : alphaClone.keySet()) {
+            source = source.replace(oneChar, alphaClone.get(oneChar));
         }
 
         return source;
